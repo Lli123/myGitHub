@@ -1,0 +1,52 @@
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p, blockquote,th,td{margin:0;padding:0;} 
+table{border-collapse:collapse;border-spacing:0;} 
+fieldset,img{border:0;} 
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;} 
+ol,ul{list-style:none;} 
+caption,th {text-align:left;} 
+h1,h2,h3,h4,h5,h6{font-size:100%; font-weight:normal;}
+html,body{
+	width: 100%;
+	height: 100%;
+	/*background: #000;*/
+}
+header{
+	width: 100%;
+	height:56px;
+	background:#1c71c5;
+}
+.header{
+	width: 90%;
+	margin:0 auto;
+
+}
+.log{
+	float: left;
+
+	padding: 10px 0 0 50px
+}
+.search{
+	 float: left;
+	 line-height: 28px;
+	 border-radius: 14px;
+	 width: 140px;
+	 height: 28px;
+	 border: none;
+	 background: #fff url(./image/zoom.png) no-repeat 5px 5px;
+	 margin-top: 14px;
+	 margin-left: 46%;
+	 padding-left: 30px;
+}
+
+.login{
+	float: right;
+	margin-right: 10%;
+	height: 28px;
+	line-height: 28px;
+	color: #fff;
+	/* vertical-align: middle; */
+	margin-top: 13px;
+	font-size: 16px;
+	text-decoration: none;
+	letter-spacing: 1px;
+}
