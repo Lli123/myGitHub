@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.6.3/css/font-awesome.min.css"/>
+		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.fa{
+			    top: -24px;
+			    left: 180px;
+			    position: relative;
+			}
+			.wrap{
+				width: 200px;
+				margin: 20px auto;
+			}
+			.error{
+				color: red;
+			}
+		</style>
+	</head>
+	<body ng-app="myApp" ng-controller="SignUpController">
+		<!--<form name="signUpForm" ng-submit="submitForm()">
+			<div class="form-group">
+				<label for="">用户名</label>
+				<input name="username"
+						ng-model="username"	
+						ng-class="{
+							'error':signUpForm.username.$inva
+						}"
+					type="" name="" id="" value="" />
+			</div>
+			
+			<input type="submit" value=""/>
+		</form>-->
+		<div class="wrap">
+			<h2>注册</h2>
+			<form action="" name="signUpForm" ng-submit="submitForm()">
+				<div class="form-group">
+					<label for="">用户名：</label>
+					<!--<pre>合法：{{signUpForm.username.$valid }}</pre>
+					<pre>{{signUpForm.username }}</pre>-->
+					<input type="text"
+						   name="username"
+						   id="username"
+						   class="form-control"
+						   ng-model="userdata.username"
+						   ng-minlength="4"
+						   ng-maxlength="32"
+						   required
+						   />
+					<p class="fa fa-check"
+						 	ng-if="signUpForm.username.$valid"></p>	   
+				<p class="error"
+					ng-if="(signUpForm.username.$error.required
+					&&signUpForm.username.$touched)"
+					>
+				用户名不可为空	
+				</p> 		   
+				<!-- 		   
+				<p class="error"
+					ng-if="(signUpForm.username.$error.minlength||
+					signUpForm.username.$error.maxlength)&&signUpForm.username.$touch"
+					>
+				用户名长度应为4至12位	
+				</p>    -->
+				</div>
+				<div class="form-group" ng-class="{'has-success':signUpForm.
+						password.$valid}">
+					<label for="">密码：</label>
+					<input 
+						type="password" name="password"
+						 id="username" class="form-control"
+						  ng-model="userdata.password"
+						   minlength="6"
+						   maxlength="25"
+						   required
+						   />
+					<p class="fa fa-check success"
+						ng-if="signUpForm.password.$valid">
+					</p>		   
+					<!-- <p class="error"
+					ng-if="(signUpForm.password.$error.required
+					&&signUpForm.password.$touch)"
+					>
+				用户名长度应为4至12位	
+				</p>   		    -->
+				</div>
+				<div class="form-group"  ng-class="{'has-success':signUpForm.
+						password2.$valid}">
+					<label for="">确认密码：</label>
+					<input type="password"
+						 name="password2" 
+						 id="username" 
+						 class="form-control" 
+						 ng-model="userdata.password2"	
+						 compare="userdata.password"
+						  />
+				</div>
+			</form>
+			
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit">注册</button>
+			</div>
+		
+		</div>
+		
+	
+		
+	</body>
+	
+</html>
